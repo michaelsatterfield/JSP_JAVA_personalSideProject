@@ -14,15 +14,19 @@ public class BCryptDemo {
 
 
         boolean userResponse = BCrypt.checkpw(answer,hash);
-
         System.out.println("User Password = " + userResponse);
 
-            if (userResponse) {
-                System.out.println("Access Granted");
-            } else {
+       while (!userResponse)  {
+           System.out.println("sorry that's incorrect please try again");
+           System.out.println("please enter the passkey");
+           scan.nextLine();
 
-                System.out.println("sorry that's incorrect please try again");
-            }
+           if(userResponse){
+               System.out.println("Access Granted");
+               break;
+           }
+
+       }
 
     }
 }
