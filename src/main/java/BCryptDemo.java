@@ -15,35 +15,31 @@ public class BCryptDemo {
 
         boolean userResponse = BCrypt.checkpw(answer,hash);
         System.out.println("User Password = " + userResponse);
+//
+//         while(!userResponse){
+//             System.out.println("not granted");
+//             System.out.println("please enter the passkey");
+//             scan.nextLine();
+//             boolean userRes2  = BCrypt.checkpw(answer,hash);
+//             if (userRes2) {
+//                 System.out.println("granted");
+//                 break;
+//
+//             }
+//         }
 
-         while(!userResponse){
-             System.out.println("not granted");
-             System.out.println("please enter the passkey");
-             scan.nextLine();
-             boolean userRes2  = BCrypt.checkpw(answer,hash);
-             if (userRes2) {
-                 System.out.println("granted");
-                 break;
 
-             }
+
+       while (!userResponse)  {
+           System.out.println("sorry that's incorrect please try again");
+           System.out.println("please enter the passkey");
+           scan.nextLine();
+           if(userResponse){
+               System.out.println("Access Granted");
+               break;
+           }
          }
-
-
-
-//       while (!userResponse)  {
-//           System.out.println("sorry that's incorrect please try again");
-//           System.out.println("please enter the passkey");
-//           scan.nextLine();
-//
-//
-//
-//           if(userResponse){
-//               System.out.println("Access Granted");
-//               break;
-//           }
-
-
-
-    }}
+    }
+}
 
 
