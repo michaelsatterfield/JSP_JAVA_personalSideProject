@@ -22,7 +22,7 @@
 
 <h1>Hello my name is: <%= name%></h1>
 
-<h1>Welcome To The Site!</h1>
+<h1>Hello World!</h1>
 <p>Path: <%= request.getRequestURL() %></p>
 <p>Query String: <%= request.getQueryString() %></p>
 <p>"name" parameter: <%= request.getParameter("name") %></p>
